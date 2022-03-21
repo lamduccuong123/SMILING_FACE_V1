@@ -1,4 +1,4 @@
-package com.example.donut;
+package com.example.bai5;
 
 import android.content.Context;
 import android.os.Build;
@@ -28,7 +28,6 @@ public class ChiTietSanPham_Adapter extends BaseAdapter {
     }
 
 
-
     @Override
     public int getCount() {
         return 0;
@@ -48,7 +47,7 @@ public class ChiTietSanPham_Adapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view = inflater.inflate(layout,null);
+        view = inflater.inflate(layout, null);
 
         TextView txtName = (TextView) view.findViewById(R.id.txtName);
         TextView txtMoTa = (TextView) view.findViewById(R.id.txtMoTa);
@@ -73,4 +72,4 @@ public class ChiTietSanPham_Adapter extends BaseAdapter {
 
         return view;
     }
-    }
+}

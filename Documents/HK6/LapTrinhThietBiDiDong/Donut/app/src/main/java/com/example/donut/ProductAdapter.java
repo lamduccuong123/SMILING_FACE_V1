@@ -66,7 +66,6 @@ public class ProductAdapter extends BaseAdapter {
         btnAdd = (ImageButton) view.findViewById(R.id.btnAdd);
         ImageView imgPicture = (ImageView) view.findViewById(R.id.imgHinh);
 
-
         com.example.donut.Product product = products.get(i);
         txtName.setText(product.getName());
         txtMoTa.setText(product.getMoTa());
@@ -88,12 +87,8 @@ public class ProductAdapter extends BaseAdapter {
         final ConstraintLayout layout01 = (ConstraintLayout) view.findViewById(R.id.linear01);
         if(positionSelected == i){
             layout01.setBackgroundColor(Color.YELLOW);
-            Intent intent = new Intent();
-//            intent.putExtra("name", (Parcelable) products.get(i));
         }
         else layout01.setBackgroundColor(Color.WHITE);
-
-
         return view;
     }
 }
