@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtCapNhat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Thêm "
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHuy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#675D5D"
+        android:text="Hủy"
+        app:layout_constraintBottom_toBottomOf="@+id/btnThem_Them"
+        app:layout_constraintStart_toEndOf="@+id/btnThem_Them"
+        app:layout_constraintTop_toTopOf="@+id/btnThem_Them"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnThem_Them"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#2196F3"
+        android:text="Thêm"
+        app:layout_constraintStart_toStartOf="@+id/edtTen_Them"
+        app:layout_constraintTop_toBottomOf="@+id/edtNgay" />
+
+    <EditText
+        android:id="@+id/edtTen_Them"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Tên hàng"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtCapNhat2"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/txtCapNhat2"
+        app:layout_constraintTop_toBottomOf="@+id/edtSoLuong" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="161dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCapNhat2">
+
+        <RadioButton
+            android:id="@+id/rdoNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập" />
+
+        <RadioButton
+            android:id="@+id/rdoXuat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xuất" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtSoLuong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Số lượng"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/edtNgay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Ngày"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/edtTen_Them"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/edtTen_Them"
+        app:layout_constraintTop_toBottomOf="@+id/edtTen_Them" />
+</androidx.constraintlayout.widget.ConstraintLayout>
