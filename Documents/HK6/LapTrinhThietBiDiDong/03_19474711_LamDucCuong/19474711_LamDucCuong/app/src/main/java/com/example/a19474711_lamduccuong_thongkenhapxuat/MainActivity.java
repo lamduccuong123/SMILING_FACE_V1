@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -62,11 +63,6 @@ public class MainActivity extends AppCompatActivity {
         this.database.QueryData("CREATE TABLE IF NOT EXISTS Product(Id INTEGER PRIMARY KEY AUTOINCREMENT, nhapXuat VARCHAR(200), soLuong VARCHAR(200), tenHangHoa VARCHAR(200), ngay String)");
 
 
-        //Thêm dữ liệu
-        //ketNoiSQL.QueryData("INSERT INTO NoiDung VALUES(null, 'Làm bạn với bầu trời')");
-        //ketNoiSQL.QueryData("INSERT INTO NoiDung VALUES(null, 'Làm người tốt')");
-
-        //Hiển thị
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,10 +70,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnThongKe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ThongKe.class);
+                startActivity(intent);
+            }
+        });
+
         btnSynchronize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showData();
+//                showData();
+                actionGetData();
             }
         });
 
